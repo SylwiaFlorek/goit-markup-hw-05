@@ -72,6 +72,19 @@ body {
   line-height: 1.2;
   padding: 0;
 }
+.touch::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--blue);
+  transform: translateY(29px);
+  border-radius: 2px;
+  position: absolute;
+}
+
 .nav-link {
   height: 16px;
   font-weight: 500;
@@ -486,4 +499,41 @@ img {
 .project-item:focus > li {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+/*okno modalne*/
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: all 250ms ease-in;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  min-height: 581px;
+  background-color: #fff;
+}
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 250ms ease-in;
+}
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 38px;
+  height: 30px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
 }
