@@ -451,6 +451,7 @@ img {
 
   overflow: hidden;
   width: 370px;
+  height: 294px;
 }
 .box-anim:hover .project-anim {
   transform: translatex(0);
